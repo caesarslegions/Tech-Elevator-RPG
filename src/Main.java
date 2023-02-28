@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -80,8 +82,10 @@ public class Main {
         System.out.println(" [0] ELEVATOR EXCALIBUR - this sword glows with a pallid blue shine...\n [1] PATHWAY PROTECTOR - this shield bears the holy emblem of the upward-pointing arrow\n [2] CHEATGPT - this small device has an uncanny talent for giving reliable advice in any situation... \n [3] PERFECT PITCH - this wearable wristband increases charisma when the wearer speaks for 30 - 40 seconds...\n [4] NIFTY NETWORK - this laminated business card instantly increases your credibility in social situations..." );
 
         // Add the corresponding item to the player's inventory using the "addItem" method. The stat bonuses will automatically apply
-
-
-
+        Map<String, Integer> elevatorExcaliburStatBonuses = new HashMap<>();
+        elevatorExcaliburStatBonuses.put("Heart", 2);
+        elevatorExcaliburStatBonuses.put("Charisma", 2);
+        Item elevatorExcalibur = new Item("Elevator Excalibur", "this sword glows with a pallid blue shine...", elevatorExcaliburStatBonuses);
+        chosenPlayerBackground.addItem(elevatorExcalibur);
     }
 }

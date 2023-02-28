@@ -36,7 +36,6 @@ public class PlayerBackground {
     // Use this method to add specific items (from the Item class) to the player's inventory
     public void addItem(Item item) {
         this.inventory.add(item);
-
         // Update stat bonuses based on the item added
         Map<String, Integer> statBonuses = item.getStatBonuses();
         for (Map.Entry<String, Integer> entry : statBonuses.entrySet()) {
