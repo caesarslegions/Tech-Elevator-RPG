@@ -43,7 +43,7 @@ public class Main {
             if (answer.equalsIgnoreCase("yes") || answer.equalsIgnoreCase("yeah") || answer.equalsIgnoreCase("y") || answer.equalsIgnoreCase("yep")) {
                 System.out.println("Do you truly consider yourself worthy?");
                 String secondAnswer = userInput.nextLine();
-                if (secondAnswer.equalsIgnoreCase("yes") || answer.equalsIgnoreCase("yeah") || answer.equalsIgnoreCase("y") || answer.equalsIgnoreCase("yep")) {
+                if (secondAnswer.equalsIgnoreCase("yes") || secondAnswer.equalsIgnoreCase("yeah") || secondAnswer.equalsIgnoreCase("y") || secondAnswer.equalsIgnoreCase("yep")) {
                     System.out.println("On a scale of 1 - 10, how much faith do you have in yourself that you can handle the pressure of being an Elevator Technician?");
                     String thirdAnswer = userInput.nextLine();
                     if (thirdAnswer.equalsIgnoreCase("10") || thirdAnswer.equalsIgnoreCase("ten")) {
