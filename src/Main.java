@@ -68,24 +68,60 @@ public class Main {
         //name
         System.out.println("What is your name, adventurer?");
         String name = userInput.nextLine();
+        chosenPlayerBackground.setName(name);
+        System.out.println("Greetings, " + name + "! You will make a fine adventurer in these perilous lands.");
 
         //choosing a starting item
-        String[] startingItems = {
-                new String("Elevator Excalibur"),
-                new String("Pathway Protector"),
-                new String("CheatGPT"),
-                new String("Perfect Pitch"),
-                new String("Nifty Network"),
-        };
-
         System.out.println("Before beginning your journey, you will be able to take one item with you.\nChoose carefully from the following and enter the number associated with the item...");
-        System.out.println(" [0] ELEVATOR EXCALIBUR - this sword glows with a pallid blue shine...\n [1] PATHWAY PROTECTOR - this shield bears the holy emblem of the upward-pointing arrow\n [2] CHEATGPT - this small device has an uncanny talent for giving reliable advice in any situation... \n [3] PERFECT PITCH - this wearable wristband increases charisma when the wearer speaks for 30 - 40 seconds...\n [4] NIFTY NETWORK - this laminated business card instantly increases your credibility in social situations..." );
+        System.out.println(" [0] ELEVATOR EXCALIBUR - this sword glows with a pallid blue shine...\n [1] PATHWAY PROTECTOR - this shield bears the holy emblem of the upward-pointing arrow\n [2] CHEATGPT - this small device has an uncanny talent for giving reliable advice in any situation... \n [3] PERFECT PITCH - this wearable wristband produces eloquent elocution when the wearer speaks for 30 - 40 seconds...\n [4] NIFTY NETWORK - this laminated business card instantly increases your credibility in social situations..." );
 
-        // Add the corresponding item to the player's inventory using the "addItem" method. The stat bonuses will automatically apply
+        // Declare and initialize the starting items
         Map<String, Integer> elevatorExcaliburStatBonuses = new HashMap<>();
         elevatorExcaliburStatBonuses.put("Heart", 2);
         elevatorExcaliburStatBonuses.put("Charisma", 2);
         Item elevatorExcalibur = new Item("Elevator Excalibur", "this sword glows with a pallid blue shine...", elevatorExcaliburStatBonuses);
-        chosenPlayerBackground.addItem(elevatorExcalibur);
+
+        Map<String, Integer> pathwayProtectorStatBonuses = new HashMap<>();
+        pathwayProtectorStatBonuses.put("Heart", 1);
+        pathwayProtectorStatBonuses.put("Intelligence", 1);
+        pathwayProtectorStatBonuses.put("Charisma", 1);
+        Item pathwayProtector = new Item("Pathway Protector", "this shield bears the holy emblem of the upward-pointing arrow", pathwayProtectorStatBonuses);
+
+        Map<String, Integer> cheatGPTStatBonuses = new HashMap<>();
+        cheatGPTStatBonuses.put("Intelligence", 3);
+        Item cheatGPT = new Item("CheatGPT", "this small device has an uncanny talent for giving reliable advice in any situation... ", cheatGPTStatBonuses);
+
+        Map<String, Integer> perfectPitchStatBonuses = new HashMap<>();
+        perfectPitchStatBonuses.put("Intelligence", 2);
+        perfectPitchStatBonuses.put("Charisma", 2);
+        Item perfectPitch = new Item("Perfect Pitch", "this wearable wristband produces eloquent elocution when the wearer speaks for 30 - 40 seconds...", perfectPitchStatBonuses);
+
+        Map<String, Integer> niftyNetworkStatBonuses = new HashMap<>();
+        niftyNetworkStatBonuses.put("Charisma", 3);
+        Item niftyNetwork = new Item("Nifty Network", "this laminated business card instantly increases your credibility in social situations...", niftyNetworkStatBonuses);
+
+        // Add the corresponding item to the player's inventory using the "addItem" method. The stat bonuses will automatically apply
+        String startingItemSelection = userInput.nextLine();
+
+        switch(startingItemSelection) {
+            case "0":
+                chosenPlayerBackground.addItem(elevatorExcalibur);
+                break;
+            case "1":
+                chosenPlayerBackground.addItem(pathwayProtector);
+                break;
+            case "2":
+                chosenPlayerBackground.addItem(cheatGPT);
+                break;
+            case "3":
+                chosenPlayerBackground.addItem(perfectPitch);
+                break;
+            case "4":
+                chosenPlayerBackground.addItem(niftyNetwork);
+                break;
+            default :
+                System.out.println(name + ", you have not entered a valid selection! Please run the program and try again. Or, continue your adventure with a starting item, if you dare...");
+                break;
+        }
     }
 }

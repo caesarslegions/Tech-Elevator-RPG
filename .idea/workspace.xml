@@ -31,7 +31,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="JUnit.AddItemTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Java-Video-Game" />
@@ -50,8 +50,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AddItemTest" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.AddItemTest" />
       </list>
     </recent_temporary>
   </component>

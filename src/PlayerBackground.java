@@ -5,6 +5,16 @@ import java.util.Map;
 
 public class PlayerBackground {
     private String background;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    private String name;
     private Map<String, Integer> stats;
     private List<Item> inventory;
 
