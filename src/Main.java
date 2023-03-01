@@ -60,6 +60,8 @@ public class Main {
                 System.out.println("Please try again. This time, ensure that you are certain about your decision.");
                 System.exit(0);
             }
+        } else {
+            System.out.println("You have not entered a valid selection! Please exit and rerun the program, adventurer.");
         }
 
         //display starting statistics to user
