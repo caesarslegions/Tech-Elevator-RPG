@@ -5,18 +5,10 @@ import java.util.Map;
 
 public class PlayerBackground {
     private String background;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     private String name;
     private Map<String, Integer> stats;
     private List<Item> inventory;
+    private int hitPoints;
 
     public PlayerBackground(String background) {
         this.stats = new HashMap<>();
@@ -61,5 +53,21 @@ public class PlayerBackground {
 
     public List<Item> getInventory() {
         return inventory;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getHitPoints() {
+        return hitPoints;
+    }
+
+    public void setHitPoints(int hitPoints) {
+        this.hitPoints = hitPoints;
     }
 }
